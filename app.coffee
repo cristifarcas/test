@@ -2,38 +2,38 @@
 # by Koen Bok
 # www.framerjs.com
 
-bg = new BackgroundLayer 
+bg = new BackgroundLayer
 	backgroundColor: "#535F71"
 
 # Create Layers
-layerA = new Layer width:80, height:80, 
+layerA = new Layer width:60, height:180,
 backgroundColor: "#fff", borderRadius:4
 layerA.center()
 layerA.x -= 50
 
-layerB = new Layer width:80, height:80, 
+layerB = new Layer width:80, height:80,
 backgroundColor: "#fff", borderRadius:4
 layerB.center()
 layerB.x += 50
 
 # Click Event
 layerA.on Events.Click, ->
-	layerA.animate 
+	layerA.animate
 		properties:
-			rotation: this.rotation + 90
+			rotation: this.rotation + 360
 		curve: "ease"
 		time: 1
-		
+
 # Touch Events
-layerB.on Events.TouchStart, -> 
-	layerB.animate 
+layerB.on Events.TouchStart, ->
+	layerB.animate
 		properties:
 			rotation: 90
 			scale: 0.8
 		curve: "ease"
 		time: 0.5
-layerB.on Events.TouchEnd, -> 
-	layerB.animate 
+layerB.on Events.TouchEnd, ->
+	layerB.animate
 		properties:
 			rotation: 0
 			scale: 1

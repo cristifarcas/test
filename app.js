@@ -12,13 +12,13 @@ bg = new BackgroundLayer({
 layerA = new Layer({
   width: 80,
   height: 80,
-  backgroundColor: "#fff",
+  backgroundColor: "#444",
   borderRadius: 4
 });
 
 layerA.center();
 
-layerA.x -= 50;
+layerA.x -= 25;
 
 layerB = new Layer({
   width: 80,
@@ -29,7 +29,7 @@ layerB = new Layer({
 
 layerB.center();
 
-layerB.x += 50;
+layerB.x += 75;
 
 /* Click Event */
 
